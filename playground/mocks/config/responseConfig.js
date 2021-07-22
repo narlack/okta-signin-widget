@@ -97,7 +97,7 @@ const idx = {
     'error-authenticator-enroll-phone-invalid-number',
   ],
   '/idp/idx/identify': [
-    'authenticator-enroll-select-authenticator',
+    //'authenticator-enroll-select-authenticator',
     // 'identify-with-only-one-third-party-idp',
     // 'error-identify-access-denied',
     // 'error-identify-user-locked-unable-challenge',
@@ -139,6 +139,8 @@ const idx = {
     // 'enroll-profile-new'
     // 'authenticator-enroll-email',
     // 'authenticator-verification-okta-verify-push',
+    // 'authenticator-verification-custom-app-push',
+    // authenticator-verification-custom-app-push-reject',
   ],
   '/idp/idx/challenge': [
     // 'authenticator-verification-webauthn',
