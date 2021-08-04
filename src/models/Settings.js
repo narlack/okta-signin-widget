@@ -76,6 +76,7 @@ export default Model.extend({
 
     // FEATURES
     'features.router': ['boolean', true, false],
+    'features.handleInitRoute': ['boolean', true, false],
     'features.securityImage': ['boolean', true, false],
     'features.rememberMe': ['boolean', true, true],
     'features.autoPush': ['boolean', true, false],
@@ -164,6 +165,9 @@ export default Model.extend({
 
     //PIV
     piv: ['object', false, {}],
+
+    //PIV
+    widgetRoutes: ['object', false, {}],
   },
 
   derived: {

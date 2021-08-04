@@ -126,4 +126,12 @@ if (typeof URL !== 'undefined') {
     render = false;
   }
 }
-render && renderPlaygroundWidget();
+render && renderPlaygroundWidget({
+  features: {
+    handleInitRoute: true,
+    router: false
+  },
+  widgetRoutes: {
+    'regitration': 'register'
+  }
+});

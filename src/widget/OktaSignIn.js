@@ -137,9 +137,9 @@ var OktaSignIn = (function() {
         // Self hosted widget can use `useInteractionCodeFlow` or `interactionHandle` option to use V2Router
         || useInteractionHandle
         || options.proxyIdxResponse) {
-      Router = V2Router;
+      Router = V2Router.createWidgetRouter(options.widgetRoutes);
     } else {
-      Router = V1Router;
+      Router = V1Router.createWidgetRouter(options.widgetRoutes);
     }
 
     _.extend(this, Router.prototype.Events, {

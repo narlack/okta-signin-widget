@@ -68,6 +68,8 @@ export default Router.extend({
   Events: Backbone.Events,
 
   initialize: function(options) {
+    console.log(options);
+    console.log(Router.routes);
     // Create a default success and/or error handler if
     // one is not provided.
     if (!options.globalSuccessFn) {
@@ -283,7 +285,8 @@ export default Router.extend({
     let pushState = false;
 
     // Support for browser's back button.
-    if (window.addEventListener && this.settings.get('features.router')) {
+    if (window.addEventListener &&
+        (this.settings.get('features.router')|| this.settings.get('features.handleInitRoute'))) {
       window.addEventListener('popstate', e => {
         if (this.controller.back) {
           e.preventDefault();
