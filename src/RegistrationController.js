@@ -118,7 +118,10 @@ export default BaseLoginController.extend({
         if (responseJSON && responseJSON.errorCauses.length) {
           const errMsg = responseJSON.errorCauses[0].errorSummary;
 
-          Util.triggerAfterError(self, new Errors.RegistrationError(errMsg));
+          Util.triggerAfterError(self, {
+            ...new Errors.RegistrationError(errMsg),
+            statusCode: responseJSON.errorCauses[0].reason
+          });
         }
       });
   },
